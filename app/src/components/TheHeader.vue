@@ -26,15 +26,23 @@
     </div>
 
     <div class="actions">
-      <div>lupa</div>
-      <div>carrinho</div>
-      <div>menu</div>
+      <div>
+        <font-awesome-icon class="fa-lg" icon="fa-solid fa-magnifying-glass" />
+      </div>
+      <div class="cart">
+        <font-awesome-icon class="fa-lg" icon="fa-solid fa-cart-shopping" />
+        <span class="product-counter">1</span>
+      </div>
+      <div>
+        <font-awesome-icon class="fa-lg" icon="fa-solid fa-bars" />
+      </div>
     </div>
   </header>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 
@@ -62,5 +70,30 @@ h1 a img {
 }
 .links-area a:hover{
   color: #CA3B3A;
+}
+
+.actions {
+  display: flex;
+  gap: 25px;
+}
+.fa-cart-shopping {
+  cursor: pointer;
+}
+.cart {
+  display: flex;
+}
+.product-counter {
+  display: flex;
+  width: 15px;
+  height: 15px;
+  background: tomato;
+  justify-content: center;
+  border-radius: 100%;
+  align-items: center;
+  font-weight: bold;
+  color: #FFF;
+  font-size: 12px;
+  margin-left: -7px;
+  margin-top: 6px;
 }
 </style>
