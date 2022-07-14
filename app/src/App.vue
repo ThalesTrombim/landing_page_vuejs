@@ -4,6 +4,7 @@
     <main>
       <product-infos></product-infos>
     </main>
+    <the-footer></the-footer>
   </div>
 </template>
 
@@ -31,5 +32,6 @@ main {
   max-width: 1440px;
   margin: auto;
   padding: 15px;
+  height: calc(100vh - 198px);
 }
 </style>

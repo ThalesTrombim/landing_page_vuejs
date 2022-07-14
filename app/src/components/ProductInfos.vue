@@ -53,7 +53,7 @@ export default {
   display: flex;
 }
 .images {
-  width: 50%;
+  width: 65%;
 }
 .infos {
   display: flex;
