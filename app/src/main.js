@@ -8,14 +8,28 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
+import { faBluetoothB } from "@fortawesome/free-brands-svg-icons";
+import { faWaveSquare } from "@fortawesome/free-solid-svg-icons";
+import { faBatteryEmpty } from "@fortawesome/free-solid-svg-icons";
 
 import TheHeader from "@/components/TheHeader";
+import TheFooter from "@/components/TheFooter";
 
 Vue.config.productionTip = false;
 
-library.add(faMagnifyingGlass, faCartShopping, faBars, faStar, regularStar);
+library.add(
+  faMagnifyingGlass,
+  faCartShopping,
+  faBars,
+  faStar,
+  regularStar,
+  faBluetoothB,
+  faWaveSquare,
+  faBatteryEmpty
+);
 
 Vue.component("the-header", TheHeader);
+Vue.component("the-footer", TheFooter);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 new Vue({
