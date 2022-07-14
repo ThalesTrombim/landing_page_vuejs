@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <the-header></the-header>
+    <the-header 
+      :amountProducts="this.cart" 
+      :totalPrice="total"
+      @removeProducts="removeProducts"
+    >
+    </the-header>
     <main>
-      <product-infos></product-infos>
+      <product-infos @addToCart="addToCart"></product-infos>
     </main>
     <the-footer></the-footer>
   </div>
@@ -14,6 +19,22 @@ export default {
   name: 'App',
   components: {
     ProductInfos
+  },
+  data() {
+    return {
+      cart: 0,
+      total: 0
+    }
+  },
+  methods: {
+    addToCart() {
+      this.cart++;
+      this.total += 89.99;
+    },
+    removeProducts() {
+      this.cart = 0;
+      this.total = 0;
+    }
   }
 }
 </script>
@@ -32,6 +53,6 @@ main {
   max-width: 1440px;
   margin: auto;
   padding: 15px;
-  height: calc(100vh - 198px);
+  min-height: calc(100vh - 198px);
 }
 </style>

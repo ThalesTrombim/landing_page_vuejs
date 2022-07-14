@@ -30,8 +30,9 @@
         <font-awesome-icon class="fa-lg" icon="fa-solid fa-magnifying-glass" />
       </div>
       <div class="cart">
-        <font-awesome-icon class="fa-lg" icon="fa-solid fa-cart-shopping" />
-        <span class="product-counter">1</span>
+        <font-awesome-icon class="fa-lg" icon="fa-solid fa-cart-shopping" @click="openDropDown" />
+        <span v-if="amountProductsCart > 0" class="product-counter">{{ amountProductsCart }}</span>
+        <drop-down v-if="isDropDownOpen" :totalPrice="totalPrice" @removeItems="handleDropDown"></drop-down>
       </div>
       <div>
         <font-awesome-icon class="fa-lg" icon="fa-solid fa-bars" />
@@ -41,8 +42,29 @@
 </template>
 
 <script>
+import DropDown from './DropDown.vue';
 export default {
-
+  components: { DropDown },
+  data() {
+    return {
+      isDropDownOpen: false
+    }
+  },
+  props: ['amountProducts', 'totalPrice'],
+  computed: {
+    amountProductsCart() {
+      return this.amountProducts;
+    }
+  },
+  methods: {
+    handleDropDown() {
+      this.isDropDownOpen = false;
+      this.$emit('removeProducts');
+    },
+    openDropDown() {
+      this.isDropDownOpen = !this.isDropDownOpen;
+    }
+  }
 }
 </script>
 
@@ -81,6 +103,7 @@ h1 a img {
 }
 .cart {
   display: flex;
+  position: relative;
 }
 .product-counter {
   display: flex;
