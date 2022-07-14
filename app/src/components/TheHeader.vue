@@ -31,7 +31,7 @@
       </div>
       <div class="cart">
         <font-awesome-icon class="fa-lg" icon="fa-solid fa-cart-shopping" />
-        <span class="product-counter">1</span>
+        <span v-if="amountProductsCart > 0" class="product-counter">{{ amountProductsCart }}</span>
       </div>
       <div>
         <font-awesome-icon class="fa-lg" icon="fa-solid fa-bars" />
@@ -42,7 +42,12 @@
 
 <script>
 export default {
-
+  props: ['amountProducts'],
+  computed: {
+    amountProductsCart() {
+      return this.amountProducts;
+    }
+  }
 }
 </script>
 

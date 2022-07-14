@@ -28,7 +28,7 @@ footer {
   background: #FCF7DA;
   max-width: 1336px;
   margin: auto;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
 }
 
 ul {

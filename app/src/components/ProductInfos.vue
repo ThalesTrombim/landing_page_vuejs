@@ -27,7 +27,7 @@
 
       <div class="price-actions">
         <p>$89.99</p>
-        <button>Add to Cart</button>
+        <button @click="addProductToCart">Add to Cart</button>
       </div>
     </section>
   </div>
@@ -44,6 +44,11 @@ export default {
   },
   components: {
     ProductImage
+  },
+  methods: {
+    addProductToCart() {
+      this.$emit('addToCart');
+    }
   }
 }
 </script>
@@ -77,9 +82,6 @@ export default {
 span {
   font-weight: bold;
 }
-.fa-star {
-  color: #CA3B3A;
-}
 .price-actions {
   display: flex;
   align-items: center;
@@ -95,5 +97,9 @@ span {
   padding: 16px 28px;
   border: none;
   font-size: 16px;
+  cursor: pointer;
+}
+.price-actions button:hover{
+  filter: brightness(1.2);
 }
 </style>
