@@ -25,11 +25,12 @@ export default {
   gap: 60px;
 }
 img {
-  width: 80%
+  width: 65%
 }
 nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 70px;
 }
 .long-bar {
