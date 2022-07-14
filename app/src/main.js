@@ -11,9 +11,11 @@ import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 import { faBluetoothB } from "@fortawesome/free-brands-svg-icons";
 import { faWaveSquare } from "@fortawesome/free-solid-svg-icons";
 import { faBatteryEmpty } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import TheHeader from "@/components/TheHeader";
 import TheFooter from "@/components/TheFooter";
+import DropDown from "@/components/DropDown";
 
 Vue.config.productionTip = false;
 
@@ -25,11 +27,13 @@ library.add(
   regularStar,
   faBluetoothB,
   faWaveSquare,
-  faBatteryEmpty
+  faBatteryEmpty,
+  faTrashCan
 );
 
 Vue.component("the-header", TheHeader);
 Vue.component("the-footer", TheFooter);
+Vue.component("drop-down", DropDown);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 new Vue({

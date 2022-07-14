@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <the-header :amountProducts="this.cart"></the-header>
+    <the-header 
+      :amountProducts="this.cart" 
+      :totalPrice="total"
+      @removeProducts="removeProducts"
+    >
+    </the-header>
     <main>
       <product-infos @addToCart="addToCart"></product-infos>
     </main>
@@ -17,13 +22,18 @@ export default {
   },
   data() {
     return {
-      cart: 0
+      cart: 0,
+      total: 0
     }
   },
   methods: {
     addToCart() {
       this.cart++;
-      console.log(this.cart)
+      this.total += 89.99;
+    },
+    removeProducts() {
+      this.cart = 0;
+      this.total = 0;
     }
   }
 }
