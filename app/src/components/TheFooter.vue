@@ -46,4 +46,16 @@ li {
   font-weight: 500;
   align-items: center;
 }
+
+@media (max-width: 430px) {
+  ul {
+    flex-direction: column;
+    padding-left: 10%;
+    gap: 0;
+  }
+  li {
+    padding: 15px 0;
+    font-size: 14px;
+  }
+}
 </style>

@@ -119,4 +119,16 @@ h1 a img {
   margin-left: -7px;
   margin-top: 6px;
 }
+
+@media (max-width: 430px) {
+  header {
+    width: 100%;
+  }
+  h1 a img {
+    width: 60px;
+  }
+  .links-area {
+    display: none;
+  }
+}
 </style>

@@ -39,6 +39,7 @@ export default {
 
 <style scoped>
 .container {
+  background: #FFF;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 12px;
   position: absolute;
@@ -79,5 +80,11 @@ img {
 }
 .deleteProducts .fa-trash-can{
   cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  .container {
+    z-index: 9;
+  }
 }
 </style>
