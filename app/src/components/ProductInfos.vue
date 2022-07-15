@@ -102,4 +102,16 @@ span {
 .price-actions button:hover{
   filter: brightness(1.2);
 }
+
+@media (max-width: 430px) {
+  .container {
+    flex-direction: column;
+  }
+  .images {
+    width: auto;
+  }
+  .infos h3{
+   margin: 20px 0; 
+  }
+}
 </style>
